@@ -1,6 +1,6 @@
-# PARA Workflower
+# PARA Manager
 
-`PARA Workflower` is an Obsidian plugin to make managing your Vault using the PARA Method, by Tiago Forte, a lot easier.  
+`PARA Manager` is an Obsidian plugin to make managing your Vault using the PARA Method, by Tiago Forte, a lot easier.  
 This plugin offers you a handful of very useful commands to  
 - Initialize your Vault and prepare it to use PARA method with this plugin
 - Create a new Project, Area or Resource
@@ -38,7 +38,7 @@ All corresponding commands can now handle both flat and folder structures for pr
 > All projects created w/o a project folder (flat) will still be handled as flat projects (single file). This might be changed in the future.
 
 
-To see all changes to the plugin, go to https://github.com/trucke/para-workflower/releases.
+To see all changes to the plugin, go to https://github.com/ZainRizvi/para-manager/releases.
 
 ---
 
@@ -48,22 +48,22 @@ A full article on the PARA method and its benefits can be found on this [blog po
 
 ## Installation
 
-> [Dataview](https://github.com/blacksmithgu/obsidian-dataview) is required, please install it first.  
+Prerequsites:
+* [Dataview](https://github.com/blacksmithgu/obsidian-dataview) is required, please install it first.  
+* Enable the core plugin `Templates` and configure the templates folder to `Templates`
 
-> Enable core plugin `Templates` and configure the templates folder to `Templates`
+#### Recommended (coming soon)
 
-#### Recommended
+`PARA Manager` will soon be available in the Obsidian community plugin browser!
 
-`PARA Workflower` is available in the Obsidian community plugin browser!
-
-1. Search for "PARA Workflower" in Obsidian's community plugins browser
-2. Enable the plugin in your Obsidian settings (find "PARA Workflower" under "Community plugins").
+1. Search for "PARA Manager" in Obsidian's community plugins browser
+2. Enable the plugin in your Obsidian settings (find "PARA Manager" under "Community plugins").
 3. Check the settings (You can customize the directory of your PARA notes and more)
 
 #### Manual
 
-Go to the [releases](https://github.com/trucke/para-workflower/releases) and download the latest `main.js` and `manifest.json` files.
-Create a folder called `para-workflower` inside `.obsidian/plugins` and place both files in it.
+Go to the [releases](https://github.com/ZainRizvi/para-manager/releases) and download the latest `main.js` and `manifest.json` files.
+Create a folder called `para-manager` inside `.obsidian/plugins` and place both files in it.
 
 
 ## Commands
@@ -80,37 +80,20 @@ Create a folder called `para-workflower` inside `.obsidian/plugins` and place bo
 | `Complete project`     | Set current open and active project as completed, set `completed` to `true`, set status to `done` and move to archive                           |
 
 ## Tips
-
 For a better UX consider to configure the following settings:  
 - `Editor -> 'Default view for new tabs'` --> `Reading view`
 - `Editor -> 'Default editing mode'` --> `Source mode`
 - `Editor -> 'Properties in document'` --> `Source`
 
-#### Tags i use for project status
-
-| Status           | Description                                                                                                     |
-| ---------------- | --------------------------------------------------------------------------------------------------------------- |
-| `draft`          | Project created or initialized; has to be defined or needs some more specification                              |
-| `pending`        | Project is specified and ready to go                                                                            |
-| `in_process`     | Project is currently under development                                                                          |
-| `postprocessing` | Project is mostly done but needs some additional documentation or other post processing (this step is optional) |
-| `done`           | Project is done and documented                                                                                  |
-
 
 ## Acknowledgements
-
 Big shout out, to the following amazing projects i relied on:
 
-- [Periodic Notes](https://github.com/liamcain/obsidian-periodic-notes)
-- [Obsidian Periodic PARA](https://github.com/quanru/obsidian-periodic-para)
-- [para-shortcuts](https://github.com/gOATiful/para-shortcuts)
+- [PARA Workflower](https://github.com/trucke/para-workflower), which this project has been forked from
 
 
-## Further Improvements & Support
-
-Feel free to contribute.
-
-Contributors are very welcome and I appreciate every input.
+## Contributions
+Contributors are very welcome and I appreciate them all.
 
 You can create an issue to report a bug, suggest an improvement for this plugin, ask a question, etc.
 

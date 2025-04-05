@@ -1,11 +1,11 @@
 {
-	"id": "para-workflower",
-	"name": "PARA Workflower",
-	"version": "0.1.5",
+	"id": "para-manager",
+	"name": "PARA Manager",
+	"version": "0.1.0",
 	"minAppVersion": "1.5.8",
-	"description": "Helpful commands for starting and working in your vault with the PARA method.",
-	"author": "KevTheDevX",
-	"authorUrl": "https://github.com/trucke",
+	"description": "Commands to use PARA faster and more efficently. Spend less time managing  your notes and more time doing what you want.",
+	"author": "ZainRizvi",
+	"authorUrl": "https://github.com/ZainRizvi",
 	"isDesktopOnly": false
 }
 
