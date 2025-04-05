@@ -132,6 +132,9 @@ export class SettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 		containerEl.empty();
 
+			// PARA Folders Section
+		containerEl.createEl('h3', { text: 'PARA Folder Structure' });
+		
 		// Projects folder with searchable dropdown
 		this.createSearchableFolderSetting(
 			containerEl,
@@ -145,17 +148,6 @@ export class SettingTab extends PluginSettingTab {
 			}
 		);
 
-		new Setting(containerEl).setName('User folder structure for projects')
-			.setDesc('Create project folders instead of using single project file.')
-			.addToggle((toggle) => toggle
-				.setValue(this.plugin.settings.useFolderStructure)
-				.onChange(async (value) => {
-					this.plugin.settings.useFolderStructure = value;
-					await this.plugin.saveSettings();
-					this.display();
-				})
-			);
-
 		// Areas folder with searchable dropdown
 		this.createSearchableFolderSetting(
 			containerEl,
@@ -168,17 +160,6 @@ export class SettingTab extends PluginSettingTab {
 				await this.plugin.saveSettings();
 			}
 		);
-
-		new Setting(containerEl).setName('Enable area companion folder')
-			.setDesc('Folder name `_<name_of_area>` which contains directly related notes to this area.')
-			.addToggle((toggle) => toggle
-				.setValue(this.plugin.settings.useCompanionDir)
-				.onChange(async (value) => {
-					this.plugin.settings.useCompanionDir = value;
-					await this.plugin.saveSettings();
-					this.display();
-				})
-			);
 
 		// Resources folder with searchable dropdown
 		this.createSearchableFolderSetting(
@@ -205,6 +186,10 @@ export class SettingTab extends PluginSettingTab {
 				await this.plugin.saveSettings();
 			}
 		);
+
+		// Templates Section - add a divider
+		containerEl.createEl('hr');
+		containerEl.createEl('h3', { text: 'Templates' });
 
 		// Templates folder with searchable dropdown
 		this.createSearchableFolderSetting(
@@ -256,6 +241,32 @@ export class SettingTab extends PluginSettingTab {
 						await this.plugin.saveSettings();
 					}, 500)
 				)
+			);
+			
+		// Additional Options Section
+		containerEl.createEl('hr');
+		containerEl.createEl('h3', { text: 'Additional Options' });
+		
+		new Setting(containerEl).setName('Use folder structure for projects')
+			.setDesc('Create project folders instead of using single project file.')
+			.addToggle((toggle) => toggle
+				.setValue(this.plugin.settings.useFolderStructure)
+				.onChange(async (value) => {
+					this.plugin.settings.useFolderStructure = value;
+					await this.plugin.saveSettings();
+					this.display();
+				})
+			);
+			
+		new Setting(containerEl).setName('Enable area companion folder')
+			.setDesc('Folder name `_<name_of_area>` which contains directly related notes to this area.')
+			.addToggle((toggle) => toggle
+				.setValue(this.plugin.settings.useCompanionDir)
+				.onChange(async (value) => {
+					this.plugin.settings.useCompanionDir = value;
+					await this.plugin.saveSettings();
+					this.display();
+				})
 			);
 	}
 }
